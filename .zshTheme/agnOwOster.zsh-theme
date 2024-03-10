@@ -241,7 +241,7 @@ prompt_status() {
 
   [[ $RETVAL -ne 0 ]] && symbols+="%{%F{red}%}✘"
   [[ $UID -eq 0 ]] && symbols+="%{%F{yellow}%}⚡"
-	[[ -n "$SSH_CLIENT" ]] && symbols+="%{%F{green}%}\uE0A2" 
+  [[ -n "$SSH_CLIENT" ]] && symbols+="%{%F{green}%}\uE0A2" 
   [[ $(jobs -l | wc -l) -gt 0 ]] && symbols+="%{%F{cyan}%}⚙"
 
   [[ -n "$symbols" ]] && prompt_segment '#111111' default "$symbols"
